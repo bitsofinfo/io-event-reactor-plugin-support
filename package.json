@@ -1,0 +1,43 @@
+{
+    "name":"io-event-reactor-plugin-support",
+    "version":"1.0.0-beta.1",
+    "description":"Plugin development supporting library for the io-event-reactor module",
+    "main":"index.js",
+    "directories":{
+        "test":"test"
+    },
+    "scripts":{
+        "test":"mocha test/all.js"
+    },
+    "keywords":[
+        "io-event-reactor",
+        "io",
+        "event",
+        "monitor",
+        "watch",
+        "file",
+        "directory",
+        "filesystem",
+        "directories"
+    ],
+    "dependencies":{
+    },
+    "devDependencies":{
+        "mocha":"latest"
+    },
+    "contributors":[
+        {
+            "name":"bitsofinfo",
+            "url":"http://bitsofinfo.wordpress.com"
+        }
+    ],
+    "license":"ISC",
+    "repository":{
+        "type":"git",
+        "url":"https://github.com/bitsofinfo/io-event-reactor-plugin-support.git"
+    },
+    "bugs":{
+        "url":"https://github.com/bitsofinfo/io-event-reactor-plugin-support/issues"
+    },
+    "homepage":"https://github.com/bitsofinfo/io-event-reactor-plugin-support"
+}
