@@ -1,5 +1,7 @@
+'use strict'
 
 var path = require('path');
+var uuid = require('node-uuid');
 
 /**
 * IoReactorException
@@ -31,6 +33,8 @@ class IoReactorException {
 */
 class IoEvent {
     constructor(ioEventType, fullPath, optionalFsStats, optionalExtraInfo) {
+
+        this._uuid = uuid.v4();
         this._eventType = ioEventType;
         this._fullPath = fullPath;
         this._optionalFsStats = optionalFsStats;
@@ -50,6 +54,9 @@ class IoEvent {
      this._context = c;
     }
 
+    get uuid() {
+        return this._uuid;
+    }
     get parentPath() {
         return this._parentPath;
     }
