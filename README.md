@@ -76,8 +76,8 @@ var ReactorResult = require('io-event-reactor-plugin-support').ReactorResult;
 * @param pluginConfig - Your custom configuration will be delivered in this object and the specification is for you to decide and document!
 *
 */
-constructor(reactorId, logFunction, errorCallback,
-            ioEventCallback, initializedCallback, pluginConfig) {
+constructor(pluginId, reactorId, logFunction,
+            errorCallback, initializedCallback, pluginConfig) {
     ....
 }
 ```
@@ -85,7 +85,7 @@ constructor(reactorId, logFunction, errorCallback,
 #### ReactorPlugin react() signature
 
 The `react(ioEvent)` method is called when an IoEvent occurs that is applicable to this ReactorPlugin as configured in `io-event-reactor`.
-It should return a `Promise`;
+It should return a `Promise` that on both fulfill/reject returns an appropriately constructed `ReactorResult` object.
 
 ```
 /**
