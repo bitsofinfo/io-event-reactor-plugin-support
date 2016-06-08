@@ -78,9 +78,12 @@ constructor(reactorId, logFunction, errorCallback,
 
 ### ReactorPlugin react() signature
 
+The `react(ioEvent)` method is called when an IoEvent occurs that is applicable to this ReactorPlugin as configured in `io-event-reactor`.
+It should return a `Promise`;
+
 ```
 /**
-* react() - core ReactorPlugin function
+* react(ioEvent) - core ReactorPlugin function
 *
 * This function is required on ReactorPlugin implementations
 *
