@@ -1,13 +1,11 @@
 {
     "name":"io-event-reactor-plugin-support",
     "version":"1.0.0-beta.1",
-    "description":"Plugin development supporting library for the io-event-reactor module",
+    "description":"Supporting library for io-event-reactor module plugin development",
     "main":"index.js",
     "directories":{
-        "test":"test"
     },
-    "scripts":{
-        "test":"mocha test/all.js"
+    "scripts": {
     },
     "keywords":[
         "io-event-reactor",
@@ -24,7 +22,6 @@
         "node-uuid":"latest"
     },
     "devDependencies":{
-        "mocha":"latest"
     },
     "contributors":[
         {
