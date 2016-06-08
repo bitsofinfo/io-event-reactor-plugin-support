@@ -2,6 +2,8 @@
 
 Supporting library for [io-event-reactor](https://github.com/bitsofinfo/io-event-reactor) plugin development.
 
+[![NPM](https://nodei.co/npm/io-event-reactor-plugin-support.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/io-event-reactor-plugin-support/)
+
 If you want to develop a new `MonitorPlugin` or `ReactorPlugin` for [io-event-reactor](https://github.com/bitsofinfo/io-event-reactor), you simply
 need to run `npm install io-event-reactor-plugin-support` in the root of your module folder. Once installed you can develop your plugin
 
