@@ -9,10 +9,15 @@ need to run `npm install io-event-reactor-plugin-support` in the root of your mo
 
 MonitorPlugins are responsible for listening for filesystem events and invoking a callback with io event information about the
 filesystem change. To create a plugin you simply need to export a `class` in your plugin that meets the following requirements.
+You can name the class whatever you want, but it should be the default thing exported by your plugin module.
 
 (For an example MonitorPlugin implementation see: [io-event-reactor-plugin-chokidar](https://github.com/bitsofinfo/iio-event-reactor-plugin-chokidar)
 
-### MonitorPlugin class constructor() signature
+#### MonitorPlugin class constructor() signature
+
+MonitorPlugins only have to meet the below constructor signature requirement and
+properly invoke the provided callbacks as events occur in the filesystem. There are no
+other functions that need to be declared on the plugin class.
 
 ```
 /**
@@ -25,7 +30,7 @@ filesystem change. To create a plugin you simply need to export a `class` in you
 * @param errorCallback - a function to be used for relaying any errors w/ signature function(message, sourceErrorObject)
 *
 * @param ioEventCallback - when a file/dir event occurs, invoke this function(eventType, fullPath, optionalFsStats, optionalExtraInfo)
-*   - where 'eventType' is one of 'add', 'addDir', 'unlink', 'unlinkDir', 'change'
+*   - where 'eventType' is one of 'add', 'addDir', 'unlink', 'unlinkDir', or 'change'
 *   - where 'fullPath' is the full path to the file/dir the event is for
 *   - when available, "optionalFsStats" if not null, should be = https://nodejs.org/api/fs.html#fs_class_fs_stats
 *   - when available, "optionalExtraInfo", varies by plugin
@@ -45,6 +50,7 @@ constructor(reactorId, logFunction, errorCallback,
 
 ReactorPlugins are responsible for reacting to an IoEvent by doing some action.
 What that action is, is up to you. To create a plugin you simply need to export a `class` in your plugin that meets the following requirements.
+You can name the class whatever you want, but it should be the default thing exported by your plugin module.
 
 (For an example ReactorPlugin implementation see: [io-event-reactor-plugin-mysql](https://github.com/bitsofinfo/iio-event-reactor-plugin-mysql)
 
@@ -54,7 +60,7 @@ var IoEvent = require('io-event-reactor-plugin-support').IoEvent;
 var ReactorResult = require('io-event-reactor-plugin-support').ReactorResult;
 ```
 
-### ReactorPlugin class constructor() signature
+#### ReactorPlugin class constructor() signature
 
 ```
 /**
@@ -76,7 +82,7 @@ constructor(reactorId, logFunction, errorCallback,
 }
 ```
 
-### ReactorPlugin react() signature
+#### ReactorPlugin react() signature
 
 The `react(ioEvent)` method is called when an IoEvent occurs that is applicable to this ReactorPlugin as configured in `io-event-reactor`.
 It should return a `Promise`;
