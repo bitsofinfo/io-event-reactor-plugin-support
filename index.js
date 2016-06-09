@@ -42,6 +42,7 @@ class IoEvent {
 
         this._parentPath = path.dirname(fullPath) ;
         this._filename = path.basename(fullPath);
+        this._parentName = this._parentPath.substring(this._parentPath.lastIndexOf(path.sep),this.parentPath.length);
 
         this._context = {}; // permits reactors to add arbitraty info to the event
     }
@@ -56,6 +57,9 @@ class IoEvent {
 
     get uuid() {
         return this._uuid;
+    }
+    get parentName() {
+        return this._parentName;
     }
     get parentPath() {
         return this._parentPath;
