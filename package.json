@@ -1,6 +1,6 @@
 {
     "name":"io-event-reactor-plugin-support",
-    "version":"1.0.0-beta.2",
+    "version":"1.0.0-beta.3",
     "description":"Supporting library for io-event-reactor module plugin development",
     "main":"index.js",
     "directories":{
