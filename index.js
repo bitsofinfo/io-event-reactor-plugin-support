@@ -42,7 +42,7 @@ class IoEvent {
 
         this._parentPath = path.dirname(fullPath) ;
         this._filename = path.basename(fullPath);
-        this._parentName = this._parentPath.substring(this._parentPath.lastIndexOf(path.sep),this.parentPath.length);
+        this._parentName = this._parentPath.substring((this._parentPath.lastIndexOf(path.sep)+1),this.parentPath.length);
 
         this._context = {}; // permits reactors to add arbitraty info to the event
     }
