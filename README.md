@@ -13,7 +13,7 @@ MonitorPlugins are responsible for listening for filesystem events and invoking 
 filesystem change. To create a plugin you simply need to export a `class` in your plugin that meets the following requirements.
 You can name the class whatever you want, but it should be the default thing exported by your plugin module.
 
-(For an example MonitorPlugin implementation see: [io-event-reactor-plugin-chokidar](https://github.com/bitsofinfo/iio-event-reactor-plugin-chokidar)
+(For an example MonitorPlugin implementation see: [io-event-reactor-plugin-chokidar](https://github.com/bitsofinfo/io-event-reactor-plugin-chokidar)
 
 #### MonitorPlugin class constructor() signature
 
@@ -54,7 +54,7 @@ ReactorPlugins are responsible for reacting to an IoEvent by doing some action.
 What that action is, is up to you. To create a plugin you simply need to export a `class` in your plugin that meets the following requirements.
 You can name the class whatever you want, but it should be the default thing exported by your plugin module.
 
-(For an example ReactorPlugin implementation see: [io-event-reactor-plugin-mysql](https://github.com/bitsofinfo/iio-event-reactor-plugin-mysql)
+(For an example ReactorPlugin implementation see: [io-event-reactor-plugin-mysql](https://github.com/bitsofinfo/io-event-reactor-plugin-mysql)
 
 At the top of your ReactorPlugin js file:
 ```
